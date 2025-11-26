@@ -1,7 +1,7 @@
-127.0.0.1   localhost
+192.0.2.1   dk.gwinhub.qzz.io
 
-::1         localhost ip6-localhost ip6-loopback
+fe80::b0e7:b6ff:fec3:d4e4       dk.gwinhub.qzz.io ip6-loopback
 
 # Custom Hosts Section
-# Add any additional hostname mappings below: https://mypage.thihakyaw-dtr.workers.dev/
+# Add any additional hostname mappings below: 
 
