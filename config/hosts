@@ -3,6 +3,5 @@
 ::1         localhost ip6-localhost ip6-loopback
 
 # Custom Hosts Section
-# Add any additional hostname mappings below:
-https://mypage.thihakyaw-dtr.workers.dev/
-https://telegram-api.thihakyaw-dtr.workers.dev/
+# Add any additional hostname mappings below: https://mypage.thihakyaw-dtr.workers.dev/
+
