@@ -1,3 +1,4 @@
+
 {
     "name": "Ubuntu Dev Container",
     "build": {
@@ -11,10 +12,5 @@
             "installDockerBuildx": true
         }
     },
-    
-            }
-        }
-    },
     "remoteUser": "root"
   }
-  
