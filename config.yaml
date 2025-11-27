@@ -23,7 +23,7 @@ data:
         http2Origin: true
     
     # Main service routing
-    - hostname: services.k8s.it
+    - hostname: dk.gwinhub.qzz.io
       service: $internal-ingress
       originRequest:
         httpHostHeader: "dk.gwinhub.qzz.io"
