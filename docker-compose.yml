@@ -28,7 +28,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
     environment:
-      - "TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}"
+      - "TUNNEL_TOKEN=eyJhIjoiNWIyOWJjZTNiMjA2MWY4MjEwYzAxM2YyYmM2NzQ3MGEiLCJ0IjoiZGIxODIyZWYtMWI4Zi00MmE0LWJlNjgtMTgzNjk2NDMxMDkwIiwicyI6Ik1HSTFZekF5Tm1NdE1HTTJaQzAwWVdWa0xXRTNaVGN0TldGaFptSXdPV0V4TjJVNSJ9"
     healthcheck:
       test: ["CMD", "cloudflared", "--version"]
       interval: 30s
