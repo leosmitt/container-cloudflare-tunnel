@@ -6,7 +6,7 @@ metadata:
 data:
   config.yaml: |
     # Name of the tunnel
-    tunnel: home
+    tunnel: cloudflare-global-tunnel
     credentials-file: /etc/cloudflared/creds/credentials.json
     metrics: 0.0.0.0:2000
     no-autoupdate: true
@@ -14,11 +14,11 @@ data:
     # Ingress rules define traffic routing
     ingress:
     # Special case for Let's Encrypt verification
-    - hostname: services.k8s.it
+    - hostname: dk.gwinhub.qzz.io
       path: /.well-known/acme-challenge/
       service: $internal-ingress
       originRequest:
-        httpHostHeader: "services.k8s.it"
+        httpHostHeader: "dk.gwinhub.qzz.io"
         noTLSVerify: true
         http2Origin: true
     
@@ -26,7 +26,7 @@ data:
     - hostname: services.k8s.it
       service: $internal-ingress
       originRequest:
-        httpHostHeader: "services.k8s.it"
+        httpHostHeader: "dk.gwinhub.qzz.io"
         noTLSVerify: true
         http2Origin: true
     
