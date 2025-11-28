@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudflared
+  name: container-cloudflare-tunnel
 spec:
   selector:
     matchLabels:
-      app: cloudflared
+      app: container-cloudflare-tunnel
   replicas: 2  # For high availability
   template:
     metadata:
@@ -17,8 +17,8 @@ spec:
         app: cloudflared
     spec:
       containers:
-      - name: cloudflared
-        image: cloudflare/cloudflared:2023.7.0
+      - name: container-cloudflare-tunnel
+        image: "Dockerfile"
         args:
         - tunnel
         - --config
@@ -43,8 +43,8 @@ spec:
         secret:
           secretName: tunnel-credentials
       - name: config
-        configMap:
-          name: cloudflared
+        configMap: .env
+          name: container-cloudflare-tunnel
           items:
           - key: config.yaml
             path: config.yaml
