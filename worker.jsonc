@@ -16,40 +16,5 @@ const securityHeaders = {
 
 };
 
-async function addHeaders(req) {
-
-constresponse=awaitfetch(req),
-
-newHeaders=newHeaders(response.headers),
-
-setHeaders=Object.assign({},securityHeaders);
-
-if (newHeaders.has("Content-Type") &&!newHeaders.get("Content-Type").includes("text/html")) {
-
-returnnewResponse(response.body,{
-
-status: response.status,
-
-statusText: response.statusText,
-
-headers: newHeaders
-
-});
-
-}
-
-Object.keys(setHeaders).forEach(name=>newHeaders.set(name,setHeaders[name]));
-
-returnnewResponse(response.body,{
-
-status: response.status,
-
-statusText: response.statusText,
-
-headers: newHeaders
-
-});
-
-}
 
 addEventListener("fetch", event => event.respondWith(addHeaders(event.request)));
