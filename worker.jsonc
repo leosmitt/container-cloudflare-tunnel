@@ -1,4 +1,17 @@
-const securityHeaders = {
+{
+  "name": "container-cloudflare-tunnel",
+  "version": "2.0.0",
+  "description": " proxy server with Cloudflare  Tunnel ",
+  "compatibility_date": "2025-11-27",
+  "main": "",
+  "directory": "./dist" ,
+  "scripts": {
+    "start": "npm install",
+    "dev": "docker compose up -d",
+    "depoly": " npx run depoly.yaml"
+  },
+
+"const securityHeaders" = {
 
 "Content-Security-Policy":"upgrade-insecure-requests",
 
